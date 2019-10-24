@@ -16,7 +16,7 @@ capture = cv2.VideoCapture(0) #VideoCapture is a constructor which will be call 
 
 while True:
     ret, frame = capture.read()
-    frame = cv2.flip(frame,-1)#flip function is used here to flip to 2D array around vertical, horizontal, or both
+    frame = cv2.flip(frame,1)#flip function is used here to flip to 2D array around vertical, horizontal, or both
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)#cvtColor fun converts an image from one color to another(*channel order sholud be(RBG or BGR) in OpenCV format is RGB but in actual it is BGR.)
 
     faces = f_casacade.detectMultiScale(gray,1.3,5)#to detect the face in image and returned as a list(1.1)
